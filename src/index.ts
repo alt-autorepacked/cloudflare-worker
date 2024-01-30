@@ -41,7 +41,7 @@ export default {
 			return fetch(newUrl);
 		}
 
-		const RPMSaddon = url.pathname.match(/^\/repo\/([^\/]+)\/([^\/]+)\/RPMS\.addon\/([a-z-]+)-(\d+\.\d+\.\d+)-(.*)$/);
+		const RPMSaddon = url.pathname.match(/^\/repo\/([^\/]+)\/([^\/]+)\/RPMS\.addon\/(.*?)-([0-9].*?)\-([^0-9].*)$/);
 		if (RPMSaddon) {
 			const packageName = RPMSaddon[3];
 			const version = RPMSaddon[4];
